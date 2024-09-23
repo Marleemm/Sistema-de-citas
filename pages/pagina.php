@@ -46,17 +46,12 @@ session_start();
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active roboto-mono" aria-current="page" href="#">Reserva</a>
+                       
+                        <li class="nav-item roboto-mono">
+                            <a class="nav-link disabled" aria-disabled="true">¡Bienvenid@!</a>
                         </li>
                         <li class="nav-item roboto-mono">
-                            <a class="nav-link" href="#">Barrios</a>
-                        </li>
-                        <li class="nav-item roboto-mono">
-                            <a class="nav-link" href="#">Ubicación</a>
-                        </li>
-                        <li class="nav-item roboto-mono">
-                            <a class="nav-link disabled" aria-disabled="true">Contactanos</a>
+                            <a class="nav-link" href="mostrarCitass.php">Mostrar citas</a>
                         </li>
                     </ul>
                 </div>
@@ -230,11 +225,13 @@ session_start();
 
         <div class="container">
             <h3 class="playwrite-fr-moderne mb-3">¡Agenda ahora!</h3>
+            <br>
 
 
             <?php
 
-           echo "Usuario ID: " . $_SESSION['id_usuario'] . "<br>";
+           echo "Usuario ID: " . $_SESSION['usuario_id'] . "<br>";
+           //echo "Usuario ID: " . $_SESSION['id_usuario'] . "<br>";
 
             include("../controladores/controlador_guardar_cita.php");
             $horas_disponibles = [
@@ -253,14 +250,14 @@ session_start();
 
             
             ?>
-
+   <br>
 
             <form id="agendaForm" method="post">
-
-                <label for="fecha">Fecha de la cita:</label>
+            
+                <label for="fecha">Fecha de cita:</label>
                 <input type="date" id="fecha" name="fecha" required>
 
-                <label for="hora">Hora de la cita:</label>
+                <label for="hora">Hora de cita:</label>
                 <select id="hora" name="hora" required>
                     <?php
                     foreach ($horas_disponibles as $hora) {
@@ -268,14 +265,24 @@ session_start();
                     }
                     ?>
                 </select>
-                <br>
+                
+                
 
+<!-- 
+                <button class="registrar" type="submit" name="enviar-cita">Registrar Cita</button>
+            </form> -->
 
-                <button type="submit" name="enviar-cita">Registrar Cita</button>
-            </form>
+            <button id: "registrar" type="submit" name="enviar-cita" style="background-color:rgb(246, 172, 140, 0.944); color: dark;">
+             Registrar Cita
+            </button>
 
-            <a href="mostrarCitas.php">Mostrar Citas</a>
-            <a href="login.php">Salir</a>
+            <br>
+            <br>
+
+            <button  style="background-color:rgb(246, 172, 140, 0.944); color: dark;  text-decoration: none;"> <a class="nav-link active" href="mostrarCitass.php">Mostrar Citas</a></button>
+           <button  style="background-color:rgb(246, 172, 140, 0.944); color: dark;"><a class="nav-link active" href="login.php">Salir</a></button>
+          
+            
 
 
 
@@ -315,16 +322,6 @@ session_start();
                     <i class="bi bi-envelope-open text-white"></i>
                 </a>
             </li>
-
-            <!-- <li class="nav-item">
-                <a href="https://www.linkedin.com/in/marlem-mart%C3%ADnez-castillo-b7a8792aa/" target="_blank"
-                    class="nav-link px-2 text-body-secondary">
-                    <i class="bi bi-linkedin fs-2"></i>
-                </a>
-            </li> -->
-
-
-
 
         </ul>
 

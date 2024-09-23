@@ -1,0 +1,100 @@
+body{
+    background-color: rgba(242, 208, 194, 0.944);
+}
+
+.intro{
+    background-image: url("../assets/fondo.jpeg");
+    background-size: cover;
+    background-position: center;
+    /* altura en la ventana del navegador */
+    min-height: 50vh;
+}
+
+.playwrite-fr-moderne {
+    font-family: "Playwrite FR Moderne", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 800px;
+    font-style: normal;
+    font-size: 30px;
+  }
+
+  
+
+  .roboto-mono{
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight:400px;
+    font-style: normal;
+  }
+  
+
+  .lato-black {
+    font-family: "Lato", system-ui;
+    font-weight: 900;
+  }
+  
+
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: rgba(246, 172, 140, 0.944);
+    color: white;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  tr:hover {
+    background-color: #e8d8ea;
+  }
+  td {
+    font-size: 1.1rem;
+  }
+  .passed {
+    color: #e63946;
+    font-weight: bold;
+  }
+  
+  
+     /* Estilo del botón */
+     .btn-volver {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        color:black;
+        background-color: rgba(246, 172, 140, 0.944);
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3 ease;
+        margin: 20px;
+        text-align: center;
+    }
+
+    /* Estilo al pasar el cursor sobre el botón */
+    .btn-volver:hover {
+        background-color: #fce5f4;
+    }
+
+    /* Estilo adicional para cambiar el color al hacer clic */
+    .btn-volver:active {
+        background-color: #fce5f4;
+    }
+    #contacto{
+        background-color: rgba(246, 172, 140, 0.944);
+        min-height: 30vh;
+      }
+
+      .nombre {
+        font-size: 10px;
+        color: #4CAF50; /* Color verde */
+        font-weight: bold;
+    }
